@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1 id="test">Hello</h1>
+    <button class="cainut" type="button">Ấn nút</button>
+  </body>
+  <script>
+    function changeText() {
+      myArray = ["Ford", "BMW", "Fiat"];
+      myObject = [
+        { Name: "Ford 1", Test: "BMW", Last: "Fiat" },
+        { Name: "Ford 2", Test: "BMW", Last: "Fiat" },
+        { Name: "Ford 3", Test: "BMW", Last: "Fiat" },
+      ];
+
+      var interTexts = "";
+      for (var i = 0; i < myObject.length; i++) {
+        interTexts += "Name : " + print_text(myObject[i].Name) + "\n";
+      }
+      document.getElementById("test").innerText = interTexts;
+
+      function print_text(text) {
+        console.log(text);
+        return text;
+      }
+
+      var a = 0;
+      b = 1;
+      if (a > b) console.log("a lớn hơn b");
+      else console.log("a nhỏ hơn b");
+
+      a > b ? console.log("a lớn hơn b") : console.log("a nhỏ hơn b");
+    }
+    var aa = 2;
+    var bb = 10;
+    var tongs = 0;
+    function tong(a, b) {
+      for (let index = a; index <= b; index++) {
+        tongs += index;
+      }
+      console.log("Tổng : " + tongs);
+    }
+    tong(aa, bb);
+  </script>
+</html>
